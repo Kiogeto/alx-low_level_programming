@@ -3,22 +3,19 @@
  * main - 6-print_numberz.c
  * Description -  single digit numbers of base 10 starting from 0
  *
- * Retutn: Always 0 (Success)
+ * Return: Always 0 (Success)
  */
 
 int main(void)
 {
-	char digit;
+	int i = 0;
 
-	for (digit = '0'; digit <= '9'; digit++)
+	for (i = 0; i < 10; i++)
 	{
-	if (digit != '4' && digit != '7')
-	{
-	putchar(digit);
-	}
+	putchar('0' + i);
 	}
 	putchar('\n');
 
-	return (0);
 
+	return (0);
 }
