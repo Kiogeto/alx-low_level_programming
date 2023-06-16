@@ -1,26 +1,29 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
 /**
  * main - 9-print_comb.c
- * Description - all possible combinations of single-digit numbers.
+ * Description - all possible combinations of single-digit numbers
  *
  * Return: Always 0 (Success)
  */
 
 int main(void)
 {
-	putchar('0');
+	int d;
 
-	for (int i = 1; i < 10; i++)
+	for (d = '0'; d <= '9'; d++)
 	{
-	putchar(' ');
 	putchar(',');
-	putchar('0' + i);
-
+	if (d != '9')
+	{
+	putchar(',');
+	putchar(' ');
+	}
 	}
 	putchar('\n');
 
 	return (0);
 
 }
-
-
