@@ -1,17 +1,13 @@
-#include "main.h"
 
-#include <stdio.h>
 /**
- * main - check the code
+ *add - adds two values
+ *@n1: The first number to be computed
+ *@n2: The second number to be computed
  *
- * Return: Always 0
+ *Return: integer value
  */
-int main(void)
+int add(int n1, int n2)
 {
-	int n;
 
-
-	n = add(89, 9);
-	printf("%d\n", n);
-	return (0);
+	return (n1 + n2);
 }
