@@ -21,4 +21,6 @@ void print_square(int size);
 void print_triangle(int size);
 
 int _putchar(char x);
+
+void print_number(int n);
 #endif
