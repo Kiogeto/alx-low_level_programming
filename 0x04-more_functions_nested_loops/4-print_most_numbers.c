@@ -1,12 +1,13 @@
 #include "main.h"
+#include <stdio.h>
 /**
- * print_most_numbers - print th numbers 0 upto 9
+ * Main - print th numbers 0 upto 9
  * Description: print the numbers excluding 2 and 4
  * Return: the numbers since 0 upto 9
  */
 void print_most_numbers(void)
 {
-	itn x = 0;
+	int x = 0;
 
 	for (; x <= 9; x++)
 	{
@@ -16,8 +17,8 @@ void print_most_numbers(void)
 	}
 	else
 	{
-	_putchar(x + '0');
+	putchar(x + '0');
 	}
-	_putchar('\n');
+	putchar('\n');
 	}
 }
