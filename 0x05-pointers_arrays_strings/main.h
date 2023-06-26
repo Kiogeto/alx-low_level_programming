@@ -19,4 +19,4 @@ void print_array(int *a, int n);
 
 int _atoi(char *s);
 
-
+int _putchar(char c)
