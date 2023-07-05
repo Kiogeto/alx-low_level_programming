@@ -1,69 +1,67 @@
 #include "main.h"
 
 /**
- * my_sqrt - function that returns the natural square root of a number.
- * @my_num: the number
- * @my_root: the root
- * Return: square root or -1
+ * divisible - function declaration
+ * @my_num: number to test
+ * @divisor: the divisor
+ * Return: 0 or 1
  */
 
-int my_sqrt(int my_num, int my_root);
+int divisible(int my_num, int divisor);
 
 /**
- * _sqrt_recursion - function definition
- * @n: the number
- * Return: square root of -1
+ * is_prime_number - function definition
+ * @n: number to test
+ * Return: 0 or 1
  */
 
-int _sqrt_recursion(int n);
+int is_prime_number(int n);
 
 /**
- * my_sqrt - function definition
- * @my_num: the number whose square root we are finding
- * @my_root: the root that will be tested
- * Description: if my number has natural square root
- * Return: the square root or -1
+ * divisible - function definition
+ * @my_num: the number to test
+ * @divisor: the divisor to use
+ * Description: checks the divisibility of a number
+ * Return: 0 for divisible, 1 for not
  */
 
-int my_sqrt(int my_num, int my_root)
+int divisible(int my_num, int divisor)
 {
-	if ((my_root * my_root) == my_num)
+	if (my_num % divisor == 0)
 	{
-		return (my_root);
+		return (0);
 	}
-	else if (my_root == my_num / 2)
-	{
-		return (-1);
-	}
-	else
-	{
-		return (my_sqrt(my_num, my_root + 1));
-	}
-}
-
-/**
- * _sqrt_recursion - function definition
- * @n: the number to return square
- * Description: if n has natural square return it else
- * return -1
- * Return: the square root of -1
- */
-
-int _sqrt_recursion(int n)
-{
-	int the_root = 0;
-
-	if (n < 0)
-	{
-		return (-1);
-	}
-	else if (n == 1)
+	else if (divisor == my_num / 2)
 	{
 		return (1);
 	}
 	else
 	{
-		return (my_sqrt(n, the_root));
+		return (divisible(my_num, divisor + 1));
 	}
 }
 
+/**
+ * is_prime_number - function definition
+ * @n: the number to be tested
+ * Description: find a prime number
+ * Return: 0 for not prime, 1 for prime
+ */
+
+int is_prime_number(int n)
+{
+	int divisor = 2;
+
+	if (n <= 1)
+	{
+		return (0);
+	}
+	else if (n >= 2 && n <= 3)
+	{
+		return (1);
+	}
+	else
+	{
+		return (divisible(n, divisor));
+	}
+}
